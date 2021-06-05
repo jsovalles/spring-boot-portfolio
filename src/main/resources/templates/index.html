@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head"></head>
+<body>
+
+	<header th:replace="layout/layout :: header"></header>
+
+	<div class="container py-4">
+
+		<div class="card bg-light">
+			<h2 class="card-header" th:text="${portfolio.title}"></h2>
+			<div class="card-body">
+				<table id="tabla-productos" class="table borderless">
+					<tbody>
+						<tr>
+							<td><img th:src="${portfolio.imageUrl}" th:alt="${portfolio.title}"  width="300" height="300"></td>
+							<td>
+								<h4> My Work Experience</h4>
+								<p th:text="${portfolio.description}"></p>
+							</td>
+						</tr>
+						<tr>
+							<td rowspan="2">
+								<h4 th:text="${portfolio.twitterUserName} + ' Timeline'"></h4>
+								<p th:text="${portfolio.twitterUserName}"></p>
+							</td>
+						</tr>
+					</tbody>
+
+				</table>
+			</div>
+		</div>
+
+	</div>
+
+	<footer th:replace="layout/layout :: footer"></footer>
+</body>
+</html>

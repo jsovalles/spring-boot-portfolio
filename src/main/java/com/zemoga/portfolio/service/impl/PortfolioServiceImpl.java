@@ -21,7 +21,7 @@ public class PortfolioServiceImpl implements IPortfolioService {
 
     @Override
     @Transactional(readOnly = true)
-    public Optional<DTOPortfolio> getUserPortfolio(int id) {
-        return Optional.of(mapper.toDTOPortfolio(iPortfolioRepository.getById(id)));
+    public DTOPortfolio getUserPortfolio(int id) {
+        return mapper.toDTOPortfolio(iPortfolioRepository.getById(id));
     }
 }
