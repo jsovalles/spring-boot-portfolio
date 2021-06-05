@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head"></head>
+<body>
+
+<header th:replace="layout/layout :: header"></header>
+
+<div class="container-fluid">
+    <div class="sidebar">
+        <img th:src="${portfolio.imageUrl}" th:alt="${portfolio.title}" width="250" height="250">
+        <h4 th:text="${portfolio.twitterUserName} + ' Timeline'"></h4>
+        <tr th:each="tweet: ${tweets}">
+            <p th:text="${tweet.text}"></p>
+        </tr>
+        <!-- <a class="twitter-timeline" data-tweet-limit="5" th:href="'https://twitter.com/' + ${portfolio.twitterUserName}"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+    </div>
+    <div class="content">
+        <h2 class="card-header" th:text="${portfolio.title}"></h2>
+        <h4> My Work Experience</h4>
+        <p th:text="${portfolio.description}"></p>
+    </div>
+</div>
+<footer th:replace="layout/layout :: footer"></footer>
+</body>
+</html>
