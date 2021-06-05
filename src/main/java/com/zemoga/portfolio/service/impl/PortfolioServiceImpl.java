@@ -14,7 +14,7 @@ import java.util.Optional;
 public class PortfolioServiceImpl implements IPortfolioService {
 
     @Autowired
-    private IPortfolioRepository iPortfolioRepository;
+    private IPortfolioRepository portfolioRepository;
 
     @Autowired
     private IPortfolioMapper mapper;
@@ -22,6 +22,6 @@ public class PortfolioServiceImpl implements IPortfolioService {
     @Override
     @Transactional(readOnly = true)
     public DTOPortfolio getUserPortfolio(int id) {
-        return mapper.toDTOPortfolio(iPortfolioRepository.getById(id));
+        return mapper.toDTOPortfolio(portfolioRepository.getById(id));
     }
 }
