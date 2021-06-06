@@ -7,4 +7,6 @@ import org.mapstruct.Mapper;
 @Mapper(componentModel = "spring")
 public interface IPortfolioMapper {
     DTOPortfolio toDTOPortfolio(Portfolio portfolio);
+
+    Portfolio toPortfolio(Integer id, DTOPortfolio portfolio);
 }
