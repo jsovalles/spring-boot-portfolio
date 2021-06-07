@@ -4,4 +4,6 @@ import com.zemoga.portfolio.controller.dto.DTOPortfolio;
 
 public interface IPortfolioService {
     DTOPortfolio getUserPortfolio(int id);
+
+    void modifyUserPortfolio(int id, DTOPortfolio portfolio);
 }

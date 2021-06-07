@@ -1,4 +1,4 @@
-package com.zemoga.portfolio.controller;
+package com.zemoga.portfolio.controller.impl;
 
 import com.zemoga.portfolio.service.ITwitterService;
 import org.springframework.beans.factory.annotation.Autowired;

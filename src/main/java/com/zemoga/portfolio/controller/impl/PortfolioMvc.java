@@ -1,6 +1,5 @@
 package com.zemoga.portfolio.controller.impl;
 
-import com.zemoga.portfolio.controller.TwitterController;
 import com.zemoga.portfolio.controller.dto.DTOPortfolio;
 import com.zemoga.portfolio.service.IPortfolioService;
 import org.slf4j.Logger;
@@ -13,10 +12,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping(value = "/portfolio")
-public class PortfolioControllerImpl {
+public class PortfolioMvc {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(PortfolioControllerImpl.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(PortfolioMvc.class);
 
     @Autowired
     private IPortfolioService portfolioService;
