@@ -71,7 +71,7 @@ Build a simple portfolio Java web app that displays the profile image, name, som
 
 The second part should be a very simple API with 2 endpoints of the profile content.
 
-###PART I
+### PART I
 
 Build a simple portfolio page with the user info, image, title, text description and a list of 5 tweets of the user timeline. Do not pay much attention to the UI/ design side of things. The focus of the test should be the back-end side of things.
 
@@ -92,7 +92,7 @@ https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuse
 
 Feel free to use any library or module to make the connection.
 
-###PART II
+### PART II
 
 Create a very simple REST API with two endpoints that allows the consumer to get and modify the profile information. Make sure it complies with the REST specification.
 # Developed in
