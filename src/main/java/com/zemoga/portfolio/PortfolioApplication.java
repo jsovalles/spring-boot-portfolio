@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.social.twitter.api.Twitter;
 import org.springframework.social.twitter.api.impl.TwitterTemplate;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 
 @SpringBootApplication
 public class PortfolioApplication {
