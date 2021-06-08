@@ -2,6 +2,8 @@ package com.zemoga.portfolio.controller.impl;
 
 import com.zemoga.portfolio.controller.dto.DTOPortfolio;
 import com.zemoga.portfolio.service.IPortfolioService;
+import com.zemoga.portfolio.service.ITwitterService;
+import com.zemoga.portfolio.service.impl.TwitterServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,13 +22,13 @@ public class PortfolioMvc {
     private IPortfolioService portfolioService;
 
     @Autowired
-    private TwitterController twitterController;
+    private ITwitterService twitterService;
 
     @GetMapping("/{user-id}")
     public String getUserPortfolio(@PathVariable(name = "user-id") int id, Model model) {
         DTOPortfolio portfolio = portfolioService.getUserPortfolio(id);
         model.addAttribute("portfolio", portfolio);
-        model.addAttribute("tweets", twitterController.getUserLastFiveTweets(portfolio.getTwitterUserName()));
+        model.addAttribute("tweets", twitterService.getUserLastFiveTweets(portfolio.getTwitterUserName()));
         return "index";
     }
 }

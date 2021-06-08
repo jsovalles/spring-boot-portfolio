@@ -1,0 +1,48 @@
+.portfolio {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.portfolio__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+.portfolio__tweets {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5%;
+}
+.portfolio__tweet {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin: 5px;
+}
+.portfolio__tweet img {
+    margin-right: 5px;
+}
+
+
+
+.portfolio__picture {
+    width: 250px;
+    height: 250px;
+}
+
+
+.portfolio__right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio__description {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5%;
+    height: 100%;
+}
